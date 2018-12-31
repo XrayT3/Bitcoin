@@ -2,7 +2,7 @@ import telebot, logging
 from aiohttp import web
 import ssl
 import json, urllib.request
-token = "442773927:AAFiWEU441LXaED-0gRhghQTVaqcEGKyjC4"
+token = ""
 
 
 WEBHOOK_HOST = '85.143.175.123'
@@ -41,7 +41,7 @@ def get_currency(message):
     bot.send_message(message.chat.id, "Курс биткойна:\nПокупка: %s руб.\nПродажа: %s руб."%(str(data.get("RUB").get("buy")), str(data.get("RUB").get("sell"))) )
 @bot.message_handler(commands=["copyright"])
 def copyright(message):
-    bot.send_message(message.chat.id, "@lampus")
+    bot.send_message(message.chat.id, "@name")
 
 
 
